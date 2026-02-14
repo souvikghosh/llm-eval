@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-eval"
+version = "0.1.0"
+description = "LLM evaluation and red-teaming toolkit — pytest for AI applications"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Souvik Ghosh", email = "souvik@example.com"}]
+dependencies = [
+    "anthropic>=0.39.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+    "click>=8.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+llm-eval = "llm_eval.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["llm_eval*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
