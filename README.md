@@ -2,7 +2,7 @@
 
 **pytest for your LLM** — evaluate faithfulness, detect hallucinations, and red-team prompt injection in one Python toolkit.
 
-Built by a QA engineer who got tired of shipping AI features without a proper test harness.
+Built for AI engineers who want to ship LLM features with confidence, not guesswork.
 
 ```bash
 pip install llm-eval
@@ -13,7 +13,7 @@ llm-eval run examples/demo.py
 
 ## What it does
 
-Most LLM testing is manual: paste a prompt, eyeball the output, ship it. `llm-eval` brings structured quality gates and adversarial probing to your AI pipeline — the same discipline applied to firmware and embedded systems, now for language models.
+Most LLM testing is manual: paste a prompt, eyeball the output, ship it. `llm-eval` brings structured quality gates and adversarial probing to your AI pipeline — the same rigor you'd apply to any production system, built for language models.
 
 | Capability | What it checks |
 |---|---|
